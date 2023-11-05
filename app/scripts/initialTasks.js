@@ -2,7 +2,7 @@
 (function (mifosX) {
     var defineHeaders = function ($httpProvider, $translateProvider, ResourceFactoryProvider, HttpServiceProvider, $idleProvider, $keepaliveProvider, IDLE_DURATION, WARN_DURATION, KEEPALIVE_INTERVAL) {
         var mainLink = getLocation(window.location.href);
-        var baseApiUrl = "https://demo.mifos.io";
+        var baseApiUrl = "https://fin.koridigital.com";
         var host = "";
         var portNumber = "";
         //accessing from openmf server
@@ -27,7 +27,7 @@
         //accessing from a file system or other servers
         else {
             if (mainLink.hostname != "") {
-                baseApiUrl = "https://" + mainLink.hostname + (mainLink.port ? ':' + mainLink.port : '');
+                baseApiUrl = "https://fin.koridigital.com"
             }
 
             if (QueryParameters["baseApiUrl"]) {
