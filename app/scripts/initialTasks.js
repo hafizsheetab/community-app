@@ -21,7 +21,7 @@
                 ResourceFactoryProvider.setTenantIdenetifier(domains[0]);
                 console.log("other than demo server", domains[0]);
             }
-            host = "https://" + mainLink.hostname;
+            host = "http://" + mainLink.hostname;
             console.log('hostname from mainLink = ', host);
         }
         //accessing from a file system or other servers
@@ -34,7 +34,7 @@
                 baseApiUrl = QueryParameters["baseApiUrl"];
             }
             var queryLink = getLocation(baseApiUrl);
-            host = "https://" + queryLink.hostname + (queryLink.port ? ':' + queryLink.port : '');
+            host = "http://" + queryLink.hostname + (queryLink.port ? ':' + queryLink.port : '');
             portNumber = queryLink.port;
 
             $httpProvider.defaults.headers.common['Fineract-Platform-TenantId'] = 'default';
